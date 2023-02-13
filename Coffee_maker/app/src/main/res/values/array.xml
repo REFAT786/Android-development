@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="milk_string">
+        <item> </item>
+        <item>Dano</item>
+        <item>Arong</item>
+        <item>Diploma</item>
+    </string-array>
+    <string-array name="sugar_string">
+        <item> </item>
+        <item>white sugar</item>
+        <item>brown sugar</item>
+    </string-array>
+</resources>
