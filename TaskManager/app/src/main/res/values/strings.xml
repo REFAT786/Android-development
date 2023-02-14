@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Task Manager</string>
+    <string name="ringing">Ringing</string>
+    <string name="vibretion">Vibretion</string>
+    <string name="title">Title</string>
+    <string name="note">Note</string>
+    <string name="new_task">New Task</string>
+    <string name="todo">TODO</string>
+    <string name="birthday">Birthday</string>
+    <string name="name">Name</string>
+    <string name="_12_23">12.23</string>
+    <string name="task_manager">Task manager</string>
+</resources>
