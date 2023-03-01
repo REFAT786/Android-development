@@ -40,30 +40,20 @@ public class MainActivity extends AppCompatActivity implements OnDelete {
         skype = findViewById(R.id.skype_id);
         addButton = findViewById(R.id.add_button_id);
 
-
-
         RecyclerView recyclerView = findViewById(R.id.recycle_view_id);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         viewModel = new ViewModelProvider(this).get(ContactViewModel.class);
-        viewModel.getAllContacts().observe(this, new Observer<List<ContactItem>>() {
-            @Override
-            public void onChanged(List<ContactItem> contactItems) {
-                CustomAdapter adapter = new CustomAdapter(contactItems, MainActivity.this);
-                recyclerView.setAdapter(adapter);
-            }
+        viewModel.getAllContacts().observe(this, contactItems -> {
+            CustomAdapter adapter = new CustomAdapter(contactItems, MainActivity.this);
+            recyclerView.setAdapter(adapter);
         });
 
 
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, FormActivity.class);
-                startActivity(intent);
-            }
+        addButton.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, FormActivity.class);
+            startActivity(intent);
         });
-
-
 
     }
 

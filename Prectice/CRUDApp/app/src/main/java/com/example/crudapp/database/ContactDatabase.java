@@ -11,7 +11,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import com.example.crudapp.dao.ContactDao;
 import com.example.crudapp.domain.ContactItems;
 
-@Database(entities = {ContactItems.class},version = 2) //add as array if multiple
+@Database(entities = {ContactItems.class},version = 3) //add as array if multiple
 public abstract class ContactDatabase extends RoomDatabase {
 
     public abstract ContactDao ContactDao();
@@ -19,18 +19,11 @@ public abstract class ContactDatabase extends RoomDatabase {
 
     public static synchronized ContactDatabase getInstance(Context context){
         if(instance == null){
-            instance = Room.databaseBuilder(context.getApplicationContext(), ContactDatabase.class , "contacts_database")
-                    .fallbackToDestructiveMigration()
-                    .addCallback(roomCallBack)
-                    .build();
+            instance = Room.databaseBuilder(context.getApplicationContext(),
+                            ContactDatabase.class, "contact_database")
+                    .fallbackToDestructiveMigration().build();
         }
         return instance;
     }
-    private static RoomDatabase.Callback roomCallBack = new RoomDatabase.Callback(){
-        @Override
-        public void onCreate(@NonNull SupportSQLiteDatabase db) {
-            super.onCreate(db);
-            // new PopulateDb(instance).execute();
-        }
-    };
+
 }

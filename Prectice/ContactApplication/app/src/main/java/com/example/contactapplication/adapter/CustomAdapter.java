@@ -17,7 +17,7 @@ import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter <CustomAdapter.ViewHolder> {
 
-//    ContactItem[] contactItems;contactItems
+//    ContactItem[] contactItems;
     private List<ContactItem> contactItems;
     OnDelete onDelete;
 

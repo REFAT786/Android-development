@@ -28,4 +28,14 @@
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/delete_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete ALL"
+        app:layout_constraintBottom_toTopOf="@+id/recycle_view_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_button_main_id"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

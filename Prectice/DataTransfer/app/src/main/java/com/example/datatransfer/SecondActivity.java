@@ -29,9 +29,6 @@ public class SecondActivity extends AppCompatActivity {
 
         textView.setText(n);
 
-
-
-
         button.setOnClickListener(view -> {
 
             int num2 = Integer.parseInt(String.valueOf(editText.getText()));

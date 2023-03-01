@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -17,7 +18,7 @@ public interface ContactDao {
     @Insert
     void Insert(ContactItems contactItems);
 
-    @Update //(onConflict = OnConflictStrategy.REPLACE)
+    @Update(onConflict = OnConflictStrategy.REPLACE)
     void Update(ContactItems contactItems);
 
     @Delete
@@ -28,5 +29,8 @@ public interface ContactDao {
 
     @Query("SELECT * FROM contacts")
     LiveData<List<ContactItems>> getAllContacts();  //updates and returns
+
+    @Query("SELECT * FROM contacts WHERE id=:id ")
+    LiveData<ContactItems> loadSingle(int id);
 }
 

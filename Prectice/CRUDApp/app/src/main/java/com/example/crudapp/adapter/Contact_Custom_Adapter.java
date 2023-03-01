@@ -1,5 +1,6 @@
 package com.example.crudapp.adapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,13 +58,11 @@ public class Contact_Custom_Adapter extends RecyclerView.Adapter<Contact_Custom_
         holder.name.setText(currentItem.getName());
         holder.email.setText(currentItem.getEmail());
         holder.phone.setText(currentItem.getPhone());
-        holder.each_item.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                onDelete.onDelete(contactItems.get(holder.getAdapterPosition()));
-                return true;
-            }
+        holder.each_item.setOnLongClickListener(view -> {
+            onDelete.onDelete(contactItems.get(holder.getAdapterPosition()));
+            return true;
         });
+
         holder.each_item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

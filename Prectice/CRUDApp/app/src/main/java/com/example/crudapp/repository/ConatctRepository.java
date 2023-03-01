@@ -13,8 +13,8 @@ import java.util.List;
 
 public class ConatctRepository {
 
-    private ContactDao contactDao;
-    private LiveData<List<ContactItems>> allContacts;
+    private final ContactDao contactDao;
+    private final LiveData<List<ContactItems>> allContacts;
 
     public ConatctRepository(Application application) { //application is subclass of context
         ContactDatabase database = ContactDatabase.getInstance(application);
@@ -41,10 +41,12 @@ public class ConatctRepository {
         return allContacts;
     }
 
+    public LiveData<ContactItems> loadSingle(int id){return contactDao.loadSingle(id);}
+
 
     private static class InsertContactAsyncTask extends AsyncTask<ContactItems, Void, Void> { //static : doesnt have reference to the
         // repo itself otherwise it could cause memory leak!
-        private ContactDao contactDao;
+        private final ContactDao contactDao;
         private InsertContactAsyncTask(ContactDao contactDao) {
             this.contactDao = contactDao;
         }
@@ -55,7 +57,7 @@ public class ConatctRepository {
         }
     }
     private static class UpdateContactAsyncTask extends AsyncTask<ContactItems, Void, Void> {
-        private ContactDao contactDao;
+        private final ContactDao contactDao;
         private UpdateContactAsyncTask(ContactDao contactDao) { //constructor as the class is static
             this.contactDao = contactDao;
         }
@@ -66,7 +68,7 @@ public class ConatctRepository {
         }
     }
     private static class DeleteContactAsyncTask extends AsyncTask<ContactItems, Void, Void> {
-        private ContactDao contactDao;
+        private final ContactDao contactDao;
         private DeleteContactAsyncTask(ContactDao contactDao) {
             this.contactDao = contactDao;
         }
@@ -76,13 +78,13 @@ public class ConatctRepository {
             return null;
         }
     }
-    private static class DeleteAllContactsAsyncTask extends AsyncTask<Void, Void, Void> {
-        private ContactDao contactDao;
+    private static class DeleteAllContactsAsyncTask extends AsyncTask<ContactItems, Void, Void> {
+        private final ContactDao contactDao;
         private DeleteAllContactsAsyncTask(ContactDao contactDao) {
             this.contactDao = contactDao;
         }
         @Override
-        protected Void doInBackground(Void... voids) {
+        protected Void doInBackground(ContactItems... contactItems) {
             contactDao.DeleteAllContacts();
             return null;
         }

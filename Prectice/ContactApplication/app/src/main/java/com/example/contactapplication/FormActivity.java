@@ -33,8 +33,6 @@ public class FormActivity extends AppCompatActivity {
         mobileInput = findViewById(R.id.mobile_input_id);
         skypeInput = findViewById(R.id.skype_input_id);
 
-
-
         back.setOnClickListener(view -> {
             Intent intent = new Intent(FormActivity.this, MainActivity.class);
             startActivity(intent);

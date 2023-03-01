@@ -1,7 +1,5 @@
 package com.example.crudapp.domain;
 
-import android.widget.EditText;
-
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -29,7 +27,7 @@ public class ContactItems {
     }
 
     public String getName() {
-        return "Name : "+name;
+        return name;
     }
 
     public void setName(String name) {
@@ -37,7 +35,7 @@ public class ContactItems {
     }
 
     public String getEmail() {
-        return "Email : "+email;
+        return email;
     }
 
     public void setEmail(String email) {
@@ -45,7 +43,7 @@ public class ContactItems {
     }
 
     public String getPhone() {
-        return "Phone : "+phone;
+        return phone;
     }
 
     public void setPhone(String phone) {

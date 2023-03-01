@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         public void onActivityResult(ActivityResult result) {
             int res = result.getResultCode();
 
-
             if(res == 1){
                 Intent intent = result.getData();
                 if(intent != null){

@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModelProvider;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -28,19 +27,16 @@ public class FormActivity extends AppCompatActivity {
 
         ContactViewModel viewModel = new ViewModelProvider(this).get(ContactViewModel.class);
 
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        add.setOnClickListener(view -> {
 
-                String userName = name.getText().toString();
-                String userEmail = email.getText().toString();
-                String userPhone = phone.getText().toString();
+            String userName =  name .getText().toString();
+            String userEmail = email.getText().toString();
+            String userPhone = phone.getText().toString();
 
-                ContactItems contactItems = new ContactItems(userName,userEmail,userPhone);
-                viewModel.insert(contactItems);
-                Intent intent = new Intent(FormActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
+            ContactItems contactItems = new ContactItems(userName,userEmail,userPhone);
+            viewModel.insert(contactItems);
+            Intent intent = new Intent(FormActivity.this, MainActivity.class);
+            startActivity(intent);
         });
     }
 }

@@ -12,8 +12,8 @@ import com.example.crudapp.repository.ConatctRepository;
 import java.util.List;
 
 public class ContactViewModel extends AndroidViewModel {
-    private ConatctRepository repository ;
-    private LiveData<List<ContactItems>> allContacts;
+    private final ConatctRepository repository ;
+    private final LiveData<List<ContactItems>> allContacts;
     public ContactViewModel(@NonNull Application application) {
         super(application);
         repository = new ConatctRepository(application);
@@ -23,6 +23,7 @@ public class ContactViewModel extends AndroidViewModel {
     public void insert(ContactItems contactItems) {
         repository.insert(contactItems);
     }
+
     public void update(ContactItems contactItems) {
         repository.update(contactItems);
     }
@@ -35,5 +36,6 @@ public class ContactViewModel extends AndroidViewModel {
     public LiveData<List<ContactItems>> getAllContacts() {
         return allContacts;
     }
+    public LiveData<ContactItems> loadSingle(int id){return repository.loadSingle(id);}
 
 }

@@ -19,4 +19,5 @@ public interface ContactDao {
 
     @Query("SELECT * FROM contacts")
     LiveData<List<ContactItem>> getAllContacts();
+
 }
