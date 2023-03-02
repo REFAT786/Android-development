@@ -41,6 +41,7 @@ public class UpdateActivity extends AppCompatActivity {
             String updatePhone = phone.getText().toString();
 
             Intent intent = new Intent(UpdateActivity.this, MainActivity.class);
+            intent.putExtra("id", bundle.getInt("com.example.crudapp.id"));
             intent.putExtra("name", updateName);
             intent.putExtra("email",updateEmail);
             intent.putExtra("phone", updatePhone);

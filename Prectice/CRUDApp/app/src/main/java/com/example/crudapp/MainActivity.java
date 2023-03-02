@@ -71,11 +71,12 @@ public class MainActivity extends AppCompatActivity implements OnDelete, OnUpdat
             if(res == 1){
                 Intent intent = result.getData();
                 if(intent != null){
+                    int n0 = intent.getIntExtra("id", 0);
                     String n1 = intent.getStringExtra("name");
                     String n2 = intent.getStringExtra("email");
                     String n3 = intent.getStringExtra("phone");
 
-                    ContactItems contactItems = new ContactItems(n1,n2,n3);
+                    ContactItems contactItems = new ContactItems(n0,n1,n2,n3);
                     viewModel.update(contactItems);
 
                     Toast.makeText(MainActivity.this, "Update", Toast.LENGTH_SHORT).show();

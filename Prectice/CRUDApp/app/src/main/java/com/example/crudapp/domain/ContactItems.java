@@ -1,6 +1,7 @@
 package com.example.crudapp.domain;
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity (tableName = "contacts")
@@ -11,7 +12,15 @@ public class ContactItems {
     private String email;
     private String phone;
 
+    @Ignore
     public ContactItems(String name, String email, String phone) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    public ContactItems(int id,String name, String email, String phone) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.phone = phone;
