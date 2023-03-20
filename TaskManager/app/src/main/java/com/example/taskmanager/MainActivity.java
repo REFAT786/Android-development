@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             TimePickerDialog timePickerDialog = new TimePickerDialog(MainActivity.this,
                     (view1, hourOfDay, minute1) -> {
-
                         time.setText(hourOfDay + ":" + minute1);
                     }, hour, minute, false);
 
