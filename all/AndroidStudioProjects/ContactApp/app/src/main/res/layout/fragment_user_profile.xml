@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.UserProfileFragment"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/profileImage_id"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/profile_picture"
+        android:src="@drawable/profileimage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/editOffIconBtn_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="9dp"
+        android:contentDescription="@string/edit"
+        android:src="@drawable/baseline_edit_off_24"
+        app:layout_constraintBottom_toBottomOf="@+id/profileImage_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintStart_toEndOf="@+id/profileImage_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/editIconBtn_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="9dp"
+        android:contentDescription="@string/edit"
+        android:src="@drawable/baseline_edit_24"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintStart_toEndOf="@+id/profileImage_id"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/UID_profile_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/uid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/UID_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_profile_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:hint="@string/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UID_profile_TIL_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/blood_profile_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/blood_group"
+        app:layout_constraintBottom_toBottomOf="@+id/name_profile_TIL_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name_profile_TIL_id"
+        app:layout_constraintTop_toBottomOf="@+id/UID_profile_TIL_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/blood_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/personalEmail_profile_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="210dp"
+        android:hint="@string/personal_email"
+        app:layout_constraintEnd_toStartOf="@+id/officialEmail_profile_TIL_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_profile_TIL_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/personalEmail_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/officialEmail_profile_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/official_email"
+        app:layout_constraintBottom_toBottomOf="@+id/personalEmail_profile_TIL_id"
+        app:layout_constraintStart_toEndOf="@+id/personalEmail_profile_TIL_id"
+        app:layout_constraintTop_toBottomOf="@+id/blood_profile_TIL_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/officiallEmail_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone1_profile_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="210dp"
+        android:hint="@string/phone_1"
+        app:layout_constraintEnd_toStartOf="@+id/phone2_profile_TIL_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalEmail_profile_TIL_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone1_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone2_profile_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/phone_2"
+        app:layout_constraintBottom_toBottomOf="@+id/phone1_profile_TIL_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phone1_profile_TIL_id"
+        app:layout_constraintTop_toBottomOf="@+id/officialEmail_profile_TIL_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone2_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/whatsapp_profile_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="210dp"
+        android:hint="@string/whatsapp_id"
+        app:layout_constraintEnd_toStartOf="@+id/skype_profile_TIL_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone1_profile_TIL_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/whatsapp_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/skype_profile_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/skype_id"
+        app:layout_constraintBottom_toBottomOf="@+id/whatsapp_profile_TIL_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/whatsapp_profile_TIL_id"
+        app:layout_constraintTop_toBottomOf="@+id/phone2_profile_TIL_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/skype_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/address_profile_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="210dp"
+        android:hint="@string/address"
+        app:layout_constraintEnd_toStartOf="@+id/nationality_profile_TIL_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whatsapp_profile_TIL_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nationality_profile_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/nationality"
+        app:layout_constraintBottom_toBottomOf="@+id/address_profile_TIL_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/address_profile_TIL_id"
+        app:layout_constraintTop_toBottomOf="@+id/skype_profile_TIL_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nationality_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/employee_profile_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="230dp"
+        android:hint="@string/employee_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_profile_TIL_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/employee_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/department_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="210dp"
+        android:hint="@string/department"
+        app:layout_constraintEnd_toStartOf="@+id/designation_profile_TIL_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/employee_profile_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/department_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/designation_profile_TIL_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/designation"
+        app:layout_constraintBottom_toBottomOf="@+id/department_TIL_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/department_TIL_id"
+        app:layout_constraintTop_toBottomOf="@+id/employee_profile_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/designation_profile_TIE_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/editBtn_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/edit"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/cancelBtn_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/department_TIL_id" />
+
+    <Button
+        android:id="@+id/cancelBtn_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/cancel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/editBtn_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editBtn_id"
+        app:layout_constraintTop_toTopOf="@+id/editBtn_id" />
+</androidx.constraintlayout.widget.ConstraintLayout>

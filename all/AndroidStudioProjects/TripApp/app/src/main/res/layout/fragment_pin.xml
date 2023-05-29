@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.PinFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPin1_id"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:hint="0"
+            app:layout_constraintBottom_toBottomOf="@+id/tilPin2_id"
+            app:layout_constraintEnd_toStartOf="@+id/tilPin2_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tilPin2_id"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPin1_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPin2_id"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="15dp"
+            android:hint="0"
+            app:layout_constraintBottom_toBottomOf="@+id/tilPin3_id"
+            app:layout_constraintEnd_toStartOf="@+id/tilPin3_id"
+            app:layout_constraintStart_toEndOf="@+id/tilPin1_id"
+            app:layout_constraintTop_toTopOf="@+id/tilPin3_id"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPin2_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPin3_id"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="15dp"
+            android:hint="0"
+            app:layout_constraintBottom_toBottomOf="@+id/tilPin4_id"
+            app:layout_constraintEnd_toStartOf="@+id/tilPin4_id"
+            app:layout_constraintStart_toEndOf="@+id/tilPin2_id"
+            app:layout_constraintTop_toTopOf="@+id/tilPin4_id"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPin3_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPin4_id"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="221dp"
+            android:layout_marginEnd="15dp"
+            android:hint="0"
+            app:layout_constraintBottom_toTopOf="@+id/btnSend_id"
+            app:layout_constraintEnd_toStartOf="@+id/tilPin5_id"
+            app:layout_constraintStart_toEndOf="@+id/tilPin3_id"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPin4_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPin5_id"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="15dp"
+            android:hint="0"
+            app:layout_constraintBottom_toBottomOf="@+id/tilPin4_id"
+            app:layout_constraintEnd_toStartOf="@+id/tilPin6_id"
+            app:layout_constraintStart_toEndOf="@+id/tilPin4_id"
+            app:layout_constraintTop_toTopOf="@+id/tilPin4_id"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPin5_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPin6_id"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="26dp"
+            android:hint="0"
+            app:layout_constraintBottom_toBottomOf="@+id/tilPin5_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tilPin5_id"
+            app:layout_constraintTop_toTopOf="@+id/tilPin5_id"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPin6_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSend_id"
+            android:layout_width="109dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="161dp"
+            android:layout_marginBottom="342dp"
+            android:padding="10dp"
+            android:text="@string/send"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilPin3_id"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

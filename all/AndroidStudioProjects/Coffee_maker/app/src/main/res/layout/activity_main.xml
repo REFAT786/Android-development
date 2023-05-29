@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/teal_700">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/coffee_maker"
+                android:textSize="30sp"
+                android:textColor="@color/white"/>
+
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/customization"
+                android:padding="20dp"
+                android:textSize="20sp"/>
+
+
+            <view style="@style/Divider" class="com.google.android.material.divider.MaterialDivider"/>
+
+
+            <RelativeLayout
+                android:id="@+id/milklayoutid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/milkid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="@string/milk_choose"
+                    android:textSize="20sp"
+                    tools:ignore="RelativeOverlap"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <Spinner
+                    android:id="@+id/milkspinnerid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/milk_name"
+                    android:autofillHints="Milk Choose"/>
+            </RelativeLayout>
+            <view style="@style/Divider" class="com.google.android.material.divider.MaterialDivider" />
+
+            <RelativeLayout
+                android:id="@+id/sugarlayoutid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/sugarid"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="@string/sugar_choose"
+                    android:textSize="20sp"
+                    tools:ignore="RelativeOverlap"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/sugarspinnerid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/sugar_name"
+                    android:autofillHints="Milk Choose"/>
+            </RelativeLayout>
+            <view style="@style/Divider" class="com.google.android.material.divider.MaterialDivider" />
+
+                <LinearLayout
+                  android:id="@+id/quantitylayoutid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                  <TextView
+                      android:id="@+id/quantityid"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/quantity"
+                      android:textSize="19sp"
+                      android:gravity="center"
+                      android:textStyle="bold"/>
+                    <Button
+                        android:id="@+id/decid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/minus"
+                        android:textSize="20sp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:shadowColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/numid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/_0"
+                        android:textSize="20sp"/>
+                    <Button
+                        android:id="@+id/incid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pluse"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/black"/>
+
+              </LinearLayout>
+                <view style="@style/Divider" class="com.google.android.material.divider.MaterialDivider" />
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <TextView
+                       android:id="@+id/totalid"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:text="@string/total"
+                       android:gravity="center"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_marginStart="70dp"
+                       android:id="@+id/totalamountid"
+                       android:layout_toEndOf="@+id/totalid"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:text="0"
+                       android:gravity="center"
+                       android:textStyle="bold"/>
+               </RelativeLayout>
+
+
+                <view style="@style/Divider" class="com.google.android.material.divider.MaterialDivider" />
+
+                <Button
+                    android:id="@+id/makeid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="@string/make"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</ScrollView>

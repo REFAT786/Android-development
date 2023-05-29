@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "283158796317",
+    "project_id": "ibss-admin",
+    "storage_bucket": "ibss-admin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283158796317:android:4d02386fa41f2d82af8ef4",
+        "android_client_info": {
+          "package_name": "com.ibss.ibss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283158796317-61hjmrf3otakddsea1tcvlrnioqn07d1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibss.ibss",
+            "certificate_hash": "7cd4ec7679753584b83d0fd5475a9102d1a909fe"
+          }
+        },
+        {
+          "client_id": "283158796317-hna4kvti8o6olp7kq8f8sbfvottk6otb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYd3VoOQU-UkVQit3TuoLAI9ucImh9edg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283158796317-hna4kvti8o6olp7kq8f8sbfvottk6otb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

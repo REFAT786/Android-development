@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentLayout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="190dp"
+            android:layout_height="310dp"
+            android:background="@drawable/diff_shape"
+            tools:layout_editor_absoluteX="116dp"
+            tools:layout_editor_absoluteY="108dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/vpnBtn_id"
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:background="@drawable/round_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="26dp">
+
+                <TextView
+                    android:id="@+id/icon_id"
+                    android:layout_width="57dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/baseline_power_settings_new_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/connectionText_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="28dp"
+                    android:text="Connect"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icon_id" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/vpnBtn2_id"
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:background="@drawable/round_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="160dp">
+
+                <TextView
+                    android:id="@+id/icon2_id"
+                    android:layout_width="57dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/baseline_power_settings_new_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/connectionText2_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="28dp"
+                    android:text="Disonnect"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icon2_id" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_id"
+            android:layout_width="263dp"
+            android:layout_height="39dp"
+            android:backgroundTint="#E7F3F8"
+            app:cardCornerRadius="8dp"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="471dp">
+
+            <TextView
+                android:id="@+id/country_id"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="Bangladesh"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:drawableLeftCompat="@drawable/baseline_flag_circle_24" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
+
+
+

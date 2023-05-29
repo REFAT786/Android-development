@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="@string/please_log_in"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/tiusernameAndEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiusernameAndEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="338dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="37dp"
+            android:hint="@string/username_email"
+            app:layout_constraintBottom_toTopOf="@+id/tiPassword_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etusernameAndEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiPassword_id"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="333dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="40dp"
+            android:hint="@string/password"
+            app:layout_constraintBottom_toTopOf="@+id/btnLogin_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tiusernameAndEmail"
+            app:passwordToggleEnabled="true"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/tvForgetPassword_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="260dp"
+            android:text="@string/forget_password"
+            android:textColor="#163D6D"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnLogin_id"
+            app:layout_constraintEnd_toEndOf="@+id/tiPassword_id"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tiPassword_id"
+            app:layout_constraintVertical_bias="0.428" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="171dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="78dp"
+            android:layout_marginBottom="81dp"
+            android:text="@string/have_an_account"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvSignUp_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin_id"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btnLogin_id"
+            android:layout_width="132dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="142dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/log_in"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvForgetPassword_id"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvSignUp_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="82dp"
+            android:layout_marginBottom="75dp"
+            android:text="@string/sign_up"
+            android:textColor="#497FC2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

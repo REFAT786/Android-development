@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Contact App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="OpenDrawer">Open navigation drawer</string>
+    <string name="CloseDrawer">Close navigation drawer</string>
+    <string name="please_log_in">Please Log In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="log_in">LOG IN</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="please_sign_up">Please Sign Up</string>
+    <string name="already_have_an_account">Already have an account</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="edit">Edit</string>
+    <string name="uid">UID</string>
+    <string name="name">Name</string>
+    <string name="personal_email">Personal Email</string>
+    <string name="whatsapp_id">Whatsapp Id</string>
+    <string name="address">Address</string>
+    <string name="department">Department</string>
+    <string name="designation">Designation</string>
+    <string name="cancel">Cancel</string>
+    <string name="blood_group">Blood group</string>
+    <string name="official_email">Official Email</string>
+    <string name="phone_1">Phone 1</string>
+    <string name="skype_id">Skype Id</string>
+    <string name="employee_id">Employee ID</string>
+    <string name="nationality">Nationality</string>
+    <string name="phone_2">Phone 2</string>
+    <string name="m_r_refat">M R Refat</string>
+
+
+</resources>
